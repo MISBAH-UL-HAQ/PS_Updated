@@ -15,20 +15,20 @@ namespace PatientSimulatorAPI.DTOs
             /// Only on the very first call:
             /// The patient’s condition prompt ID (e.g., 1 for Asthma).
             /// </summary>
-            [Required(ErrorMessage = "SelectedPromptId is required for a new session.")]
+           
             public int? SelectedPromptId { get; set; }
 
             /// <summary>
             /// Only on the very first call: patient’s age.
             /// </summary>
-            [Required(ErrorMessage = "Age is required for a new session.")]
+      
             [Range(10, 110, ErrorMessage = "Age must be between 10 and 110.")]
             public int? Age { get; set; }
 
             /// <summary>
             /// Only on the very first call: patient’s gender ("male"/"female").
             /// </summary>
-            [Required(ErrorMessage = "Gender is required for a new session.")]
+            
             [RegularExpression("^(male|female)$", ErrorMessage = "Gender must be either 'male' or 'female'.")]
             public string? Gender { get; set; }
 
